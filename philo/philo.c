@@ -6,7 +6,7 @@
 /*   By: sagemura <sagemura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 02:11:44 by sagemura          #+#    #+#             */
-/*   Updated: 2024/02/19 13:13:55 by sagemura         ###   ########.fr       */
+/*   Updated: 2024/02/27 18:15:30 by sagemura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ static int	philo_set_vars(int ac, char **av)
 {
 	t_vars	vars;
 
-	vars.philo_num = ft_atoi(av[1]);
-	vars.time2die = ft_atoi(av[2]);
-	vars.time2eat = ft_atoi(av[3]);
-	vars.time2sleep = ft_atoi(av[4]);
+	vars.philo_num = get_nbr(av[1]);
+	vars.time2die = get_nbr(av[2]);
+	vars.time2eat = get_nbr(av[3]);
+	vars.time2sleep = get_nbr(av[4]);
 	if (ac == 6)
-		vars.must2eat = ft_atoi(av[5]);
+		vars.must2eat = get_nbr(av[5]);
 	else
 		vars.must2eat = -1;
 	if (vars.philo_num < 1 || vars.time2die < 0 || vars.time2eat < 0
@@ -38,7 +38,7 @@ static int	philo(int ac, char **av)
 	i = 1;
 	while (i < ac)
 	{
-		if (ft_atoi(av[i]) == -1)
+		if (get_nbr(av[i]) == -1)
 			return (ft_close(NULL, arg_error));
 		i++;
 	}

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   get_nbr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sagemura <sagemura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 02:48:49 by sagemura          #+#    #+#             */
-/*   Updated: 2024/02/15 19:23:57 by sagemura         ###   ########.fr       */
+/*   Updated: 2024/02/27 18:16:57 by sagemura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../philo.h"
 
-static long	ft_atoi_helper(char *s)
+static long	get_nbr_helper(char *s)
 {
 	int	i;
 
@@ -35,14 +35,14 @@ static long	ft_length(char *s, int i)
 	return (i);
 }
 
-int	ft_atoi(char *s)
+int	get_nbr(char *s)
 {
 	long	i;
 	int		flag;
 	long	length;
 	long	res;
 
-	i = ft_atoi_helper(s);
+	i = get_nbr_helper (s);
 	if (i == -1)
 		return (-1);
 	flag = i;

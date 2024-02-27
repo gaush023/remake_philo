@@ -6,7 +6,7 @@
 /*   By: sagemura <sagemura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 02:11:24 by sagemura          #+#    #+#             */
-/*   Updated: 2024/02/17 13:09:47 by sagemura         ###   ########.fr       */
+/*   Updated: 2024/02/27 18:10:31 by sagemura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,11 @@ typedef struct s_vars
 	pthread_mutex_t	print;
 }					t_vars;
 
-// libft
-int					ft_atoi(char *s);
-size_t				ft_strlen(char *s);
+//helper_func/utils
+int					get_nbr(char *s);
+size_t				get_len(char *s);
 
-// helper_func
+//helper_func
 int					ft_close(t_vars *vars, enum e_error i);
 void				oyasumi(unsigned long time, t_vars *vars);
 unsigned long		get_time(void);

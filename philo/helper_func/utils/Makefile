@@ -6,7 +6,7 @@
 #    By: sagemura <sagemura@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/15 17:43:44 by sagemura          #+#    #+#              #
-#    Updated: 2024/02/17 17:22:40 by sagemura         ###   ########.fr        #
+#    Updated: 2024/02/27 18:09:08 by sagemura         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = utils.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_strlen.c ft_atoi.c
+SRC = get_len.c get_atoi.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
